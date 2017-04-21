@@ -22,20 +22,102 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief prints the statistics from an unsigned array
+ * 
+ * The print_statistics() function takes an unsigned char
+ * array pointer, and a length as inputs. It calls other
+ * functions within the stats.c program, pass the array
+ * and length to them, in order to print the outputs of 
+ * min, max, mean, and median functions.
  *
- * <Add Extended Description Here>
+ * @param *array unsigned char pointer to the input data array
+ * @param length unsigned int of length of the array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @return no return values. Just prints
  */
+void print_statistics(unsigned char *array);
+
+
+
+
+/**
+ * @brief print the contents of an array input
+ *
+ * the function takes unsigned char pointer to array, 
+ * and an unsigned integer  as athe array length, and
+ * print the contents of the array to screen
+ * 
+ * @param *array unsigned char pointer to array input
+ * @param length unsigned int describing length of array
+ * 
+ * @return returns void. Just prints
+ */
+void print_array(unsigned char *array, unsigned int length);
+
+/**
+ * @brief finds the median of an input array
+ *
+ * the function takes unsigned char pointer and unsigned int as 
+ * location and length for an array of chars, then returns the median.
+ *
+ * @param *array unsigned char pointer to array input
+ * @param length unsigned int describing length of array
+ * 
+ * @return returns the median value of the array components
+ */
+unsigned char find_median(unsigned char *array, unsigned int length);
+
+/**
+ * @brief find the mean of an input array
+ * 
+ * the function takes unsigned char pointer and unsigned int as inputs
+ * then calculates the mean of the array they reference. 
+ * 
+ * @param *array unsinged char pointer to array input
+ * @param length unsigned int describing the length of the array
+ *
+ * @return returns the mean value of the array components
+ */
+unsigned char find_mean(unsigned char *array, unsigned int length);
+
+/**
+ * @brief find the maximum value within an array
+ * 
+ * the function takes unsigned char pointer and unsigned int as inputs
+ * then finds the maximum values within the array that they reference.
+ * 
+ * @param *array unsigned char pointer to array input
+ * @param length unsigned int describing the length of the input array
+ *
+ * @return returns the maximum value of the array components
+ */
+unsigned char find_maximum(unsigned char *array, unsigned int length);
+
+/**
+ * @brief find the minimum value within the array
+ * 
+ * the function takes unsigned char pointer and unsigned int as inputs
+ * then finds the minimum value within the array they reference
+ *
+ * @param *array unsigned char pointer to array input
+ * @param length unsigned int describing the length of the input array
+ *
+ * @return returns the minimum value of the array components
+ */
+unsigned char find_minimum(unsigned char *array, unsigned int length);
+
+/**
+ * @brief sort the input array components from high to low
+ * 
+ * the function takes unsigned char pointer and unsigned int as inputs
+ * describing an array. The function then sorts the array components
+ * from high to low, and returns the result as an array.
+ *
+ * @return returns the unsigned char array, rearranged from high to low
+*/
+unsigned char sort_array(unsigned char *array, unsigned int length);
 
 
 #endif /* __STATS_H__ */

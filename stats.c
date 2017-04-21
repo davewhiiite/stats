@@ -9,13 +9,15 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief main program for computing various statistical values of a data array
  *
- * <Add Extended Description Here>
+ * The program defines an array of data. functions may be called to print the values,
+ * and compute various values of statistically important phenomena (e.g. mean, min
+ * max).
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Dave White
+ * @date 04-21-2017
  *
  */
 
@@ -37,6 +39,35 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+
+  void print_statistics(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
+  void print_array(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
+  unsigned char find_median(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
+  unsigned char find_mean(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
+  unsigned char find_maximum(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
+  unsigned char find_minimum(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
+  unsigned char sort_array(unsigned char * array, unsigned int length){
+  // insert code here
+  }
+
 
 }
 
