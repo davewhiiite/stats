@@ -43,8 +43,8 @@ void main() {
   ptr = numbers;
   unsigned char max_out;
   unsigned char min_out;
-  float med_out;
-  float mean_out; 
+  unsigned char med_out;
+  unsigned char mean_out; 
   unsigned char * sorted_out;
 
   /* Statistics and Printing Functions Go Here */
@@ -54,16 +54,16 @@ void main() {
 
     for(int i = 0; i < length; i++){
       printf("%d", *array);
-      printf(", ");
+      printf(" ");
       array++;
     }
   }
 
   /* function to return the median of an array */
-  float find_median(unsigned char * array, unsigned int length){
+  unsigned char find_median(unsigned char * array, unsigned int length){
   
-    //variables must be float to store intermediate median values
-    float median, med_a, med_b; 
+    //variables to store intermediate median values
+    unsigned char median, med_a, med_b; 
     //various indexing variables 
     int med_index;
     int i, j, flag = 1;
@@ -87,6 +87,7 @@ void main() {
       } // end inner for loop
     } // end outer for loop
 
+    // The actual median of the sorted array is now found
     if( (length & 1) == 1){ //if array length is odd
       med_index = length / 2; // the median is at the center of the array
       median = array[med_index];
@@ -102,15 +103,17 @@ void main() {
   }
 
   /* procedure for calculating the mean or average values of a number set */
-  float find_mean(unsigned char * array, unsigned int length){
+  unsigned char find_mean(unsigned char * array, unsigned int length){
 
     float mean;
     float sum = 0;
 
+    // for loop steps through, and sums each of the array components
     for(unsigned int i = 0; i < length; i++){
       sum += *array;
       array++;
     }
+    // the mean is the sum of the components, divided by their count
     mean = sum / length ;
     return mean;
   }
@@ -187,18 +190,18 @@ void main() {
     printf("\n");
 
     mean_out = find_mean(ptr, SIZE);
-    printf("The mean of the set is: %f", mean_out);
+    printf("The mean of the set is: %d", mean_out);
     printf("\n");
 
     med_out = find_median(ptr, SIZE);
-    printf("The median of the set is: %f", med_out);
+    printf("The median of the set is: %d", med_out);
     printf("\n");
 
     sorted_out = sort_array(ptr, SIZE);
     printf("The sorted array follows (descending): ");
     for( int i = 0; i < SIZE; i++){
       printf("%d", *sorted_out);
-      printf(", ");
+      printf(" ");
       sorted_out++;
     }
   } // end print_statistics function
