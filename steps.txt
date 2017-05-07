@@ -1,0 +1,5 @@
+1. sort descending on "sort_array" function --> complete
+
+2. Find median of the set
+
+3. put all of the printed stuff into the print_stats (or whatever) function.

@@ -26,8 +26,7 @@
 /**
  * @brief prints the statistics from an unsigned array
  * 
- * The print_statistics() function takes an unsigned char
- * array pointer, and a length as inputs. It calls other
+ * The print_statistics() function merely calls other
  * functions within the stats.c program, pass the array
  * and length to them, in order to print the outputs of 
  * min, max, mean, and median functions.
@@ -37,10 +36,7 @@
  *
  * @return no return values. Just prints
  */
-void print_statistics(unsigned char *array);
-
-
-
+void print_statistics(void);
 
 /**
  * @brief print the contents of an array input
@@ -54,7 +50,7 @@ void print_statistics(unsigned char *array);
  * 
  * @return returns void. Just prints
  */
-void print_array(unsigned char *array, unsigned int length);
+void print_array(unsigned char * array, unsigned int length);
 
 /**
  * @brief finds the median of an input array
@@ -67,7 +63,7 @@ void print_array(unsigned char *array, unsigned int length);
  * 
  * @return returns the median value of the array components
  */
-unsigned char find_median(unsigned char *array, unsigned int length);
+unsigned char find_median(unsigned char * array, unsigned int length);
 
 /**
  * @brief find the mean of an input array
@@ -80,7 +76,7 @@ unsigned char find_median(unsigned char *array, unsigned int length);
  *
  * @return returns the mean value of the array components
  */
-unsigned char find_mean(unsigned char *array, unsigned int length);
+unsigned char find_mean(unsigned char * array, unsigned int length);
 
 /**
  * @brief find the maximum value within an array
@@ -93,7 +89,7 @@ unsigned char find_mean(unsigned char *array, unsigned int length);
  *
  * @return returns the maximum value of the array components
  */
-unsigned char find_maximum(unsigned char *array, unsigned int length);
+unsigned char find_maximum(unsigned char * array, unsigned int length);
 
 /**
  * @brief find the minimum value within the array
@@ -106,7 +102,7 @@ unsigned char find_maximum(unsigned char *array, unsigned int length);
  *
  * @return returns the minimum value of the array components
  */
-unsigned char find_minimum(unsigned char *array, unsigned int length);
+unsigned char find_minimum(unsigned char * array, unsigned int length);
 
 /**
  * @brief sort the input array components from high to low
@@ -117,7 +113,7 @@ unsigned char find_minimum(unsigned char *array, unsigned int length);
  *
  * @return returns the unsigned char array, rearranged from high to low
 */
-unsigned char sort_array(unsigned char *array, unsigned int length);
+unsigned char sort_array(unsigned char * array, unsigned int length);
 
 
 #endif /* __STATS_H__ */
